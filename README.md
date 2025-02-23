@@ -1,17 +1,17 @@
 ## PIZZA-HUT-DATA-ANALYSIS
 ![Pizza-Hut-Logo](https://github.com/user-attachments/assets/21d97493-b874-4fef-a023-8425e5ff3544)
 
-1.Pizza Sales Analysis Project
+## 1.Pizza Sales Analysis Project
 This project is focused on analyzing the sales data of a fictional pizza restaurant to derive meaningful business insights. The analysis aims to uncover trends in customer orders, revenue generation, and popular pizza types. By leveraging SQL queries, we can efficiently process and analyze large datasets to support data-driven decision-making.
 
 
 ## 2.Database Schema
 The database for this project includes the following tables:
 
--->pizzas: Contains details about each pizza, such as pizza ID, type ID, size, and price.
--->pizza_types: Stores information about different types of pizzas, including type ID, name, category, and ingredients.
--->orders: Records information about customer orders, including order ID, date, and time.
--->order_details: Contains details about each order, such as order details ID, order ID, pizza ID, and quantity.
+- pizzas: Contains details about each pizza, such as pizza ID, type ID, size, and price.
+- pizza_types: Stores information about different types of pizzas, including type ID, name, category, and ingredients.
+- orders: Records information about customer orders, including order ID, date, and time.
+- order_details: Contains details about each order, such as order details ID, order ID, pizza ID, and quantity.
 
 ## 3.Analysis Goals
 The analysis is designed to answer several key business questions, including:
@@ -227,11 +227,11 @@ WHERE rn <= 3
 ORDER BY category, revenue DESC;
 ```
 ## Finding And Conclusions
-** 1.Total revenue and top-selling pizzas identified.**
-2.Peak order hours and daily average pizza sales analyzed.
-3.Most popular pizza categories and sizes determined.
-4.Cumulative revenue trend and percentage contribution calculated.
-5.Insights for promotions, inventory, and business growth derived.
+-1.Total revenue and top-selling pizzas identified.
+-2.Peak order hours and daily average pizza sales analyzed.
+-3.Most popular pizza categories and sizes determined.
+-4.Cumulative revenue trend and percentage contribution calculated.
+-5.Insights for promotions, inventory, and business growth derived.
 
 
 
