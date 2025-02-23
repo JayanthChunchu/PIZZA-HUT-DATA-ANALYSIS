@@ -1,11 +1,11 @@
-# PIZZA-HUT-DATA-ANALYSIS
+## PIZZA-HUT-DATA-ANALYSIS
 ![Pizza-Hut-Logo](https://github.com/user-attachments/assets/21d97493-b874-4fef-a023-8425e5ff3544)
 
 1.Pizza Sales Analysis Project
 This project is focused on analyzing the sales data of a fictional pizza restaurant to derive meaningful business insights. The analysis aims to uncover trends in customer orders, revenue generation, and popular pizza types. By leveraging SQL queries, we can efficiently process and analyze large datasets to support data-driven decision-making.
 
 
-2.Database Schema
+## 2.Database Schema
 The database for this project includes the following tables:
 
 -->pizzas: Contains details about each pizza, such as pizza ID, type ID, size, and price.
@@ -13,7 +13,7 @@ The database for this project includes the following tables:
 -->orders: Records information about customer orders, including order ID, date, and time.
 -->order_details: Contains details about each order, such as order details ID, order ID, pizza ID, and quantity.
 
-3.Analysis Goals
+## 3.Analysis Goals
 The analysis is designed to answer several key business questions, including:
 
 -->The total number of orders placed.
@@ -28,28 +28,29 @@ The analysis is designed to answer several key business questions, including:
 -->Cumulative revenue over time.
 -->Top 3 most ordered pizza types based on revenue for each category.
 
-(4.)Tools Used
-(a.)SQL
+## 4.Tools Used
+# (a.)SQL
 Structured Query Language (SQL) is the primary tool used in this project for data extraction, manipulation, and analysis. SQL allows us to write queries that efficiently retrieve and process data from the database, enabling us to answer complex business questions.
 
-(b.)Database Management System
+# (b.)Database Management System
 A relational database management system (RDBMS) such as MySQL  is used to store and manage the data. The RDBMS provides a robust and scalable environment for handling the pizza sales data.
 
 ```Create Database
 CREATE DATABASE pizzahut;
 USE pizzahut;
-```-- Retrieve the total number of orders placed.
+```
+##  Retrieve the total number of orders placed.
 SELECT 
     COUNT(order_id) AS total_orders
 FROM
     orders;
-Objective :To retrieve the total number of orders placed by counting the order_id values from the orders table.
+## Objective :To retrieve the total number of orders placed by counting the order_id values from the orders table.
 ``` SELECT 
     COUNT(order_id) AS total_orders
 FROM
     orders;
 ```
-Compute total revenue from pizza sales with rounding.
+## Objective :Compute total revenue from pizza sales with rounding.
 ```
 SELECT 
     ROUND(SUM(od.quantity * p.price), 2) AS total_revenue
@@ -58,7 +59,7 @@ FROM
 JOIN
     pizzas p ON od.pizza_id = p.pizza_id;
 ```
-Find the highest-priced pizza and its name.
+## Find the highest-priced pizza and its name.
 ```
 SELECT 
     pt.name AS pizza_name, p.price
@@ -69,7 +70,7 @@ FROM
 ORDER BY p.price DESC
 LIMIT 1;
 ```
-Find the most ordered pizza size and its count.
+## Objective :Find the most ordered pizza size and its count.
 ```
 SELECT 
     size, COUNT(*) AS size_count
@@ -81,7 +82,7 @@ GROUP BY size
 ORDER BY size_count DESC
 LIMIT 1;
 ```
-Retrieve the top 5 most ordered pizza types with their total quantities.
+## Objective :Retrieve the top 5 most ordered pizza types with their total quantities.
 ```
 SELECT 
     pt.name, SUM(od.quantity) AS total_quantity
@@ -95,7 +96,7 @@ GROUP BY pt.name
 ORDER BY total_quantity DESC
 LIMIT 5;
 ```
-Find the total quantity ordered for each pizza category.
+## Objective :Find the total quantity ordered for each pizza category.
 ``` SELECT 
     pt.category, SUM(od.quantity) AS total_quantity
 FROM
@@ -107,7 +108,7 @@ FROM
 GROUP BY pt.category
 ORDER BY total_quantity DESC;
 ```
-Objective : Analyze order distribution by hour of the day.
+## Objective :Objective : Analyze order distribution by hour of the day.
 ```
 SELECT 
     HOUR(order_time) AS order_hour,
@@ -117,7 +118,7 @@ FROM
 GROUP BY HOUR(order_time)
 ORDER BY order_hour;
 ```
-Objective : Find the distribution of pizza sales by category.
+## Objective : Find the distribution of pizza sales by category.
 ```
 SELECT 
     pt.category, COUNT(od.order_details_id) AS order_count
@@ -130,7 +131,7 @@ FROM
 GROUP BY pt.category
 ORDER BY order_count DESC;
 ```
-Objective : Calculate the average number of pizzas ordered per day.
+## Objective : Calculate the average number of pizzas ordered per day.
 ```
 SELECT 
     ROUND(AVG(daily_orders.total_pizzas), 0) AS avg_pizzas_per_day
@@ -142,7 +143,7 @@ FROM
     JOIN order_details od ON o.order_id = od.order_id
     GROUP BY order_date) daily_orders;
 ```
-Objective : Identify the top 3 pizza types generating the highest revenue.
+## Objective : Identify the top 3 pizza types generating the highest revenue.
 ```
 SELECT 
     pt.name, SUM(od.quantity * p.price) AS total_revenue
@@ -156,7 +157,7 @@ GROUP BY pt.name
 ORDER BY total_revenue DESC
 LIMIT 3;
 ```
-Objective : Calculate each pizza type's percentage contribution to total revenue.
+## Objective : Calculate each pizza type's percentage contribution to total revenue.
 ```
 SELECT 
     pr.name,
@@ -177,7 +178,7 @@ FROM
     JOIN pizzas p ON od.pizza_id = p.pizza_id) tr
 ORDER BY percentage_contribution DESC;  
 ```
-Objective : Track cumulative revenue growth over time.
+## Objective : Track cumulative revenue growth over time.
 ```
 SELECT 
     order_date, 
@@ -198,7 +199,7 @@ FROM (
 ORDER BY 
     order_date;
 ```
-Objective : Identify the top 3 highest-revenue pizza types within each category.
+## Objective : Identify the top 3 highest-revenue pizza types within each category.
 ```
 SELECT category, name, ROUND(revenue, 2) AS revenue
 FROM (
@@ -225,8 +226,8 @@ FROM (
 WHERE rn <= 3
 ORDER BY category, revenue DESC;
 ```
-Finding And Conclusions
-1.Total revenue and top-selling pizzas identified.
+## Finding And Conclusions
+** 1.Total revenue and top-selling pizzas identified.**
 2.Peak order hours and daily average pizza sales analyzed.
 3.Most popular pizza categories and sizes determined.
 4.Cumulative revenue trend and percentage contribution calculated.
