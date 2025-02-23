@@ -1,4 +1,4 @@
-''' # PIZZA-HUT-DATA-ANALYSIS
+# PIZZA-HUT-DATA-ANALYSIS
 ![Pizza-Hut-Logo](https://github.com/user-attachments/assets/21d97493-b874-4fef-a023-8425e5ff3544)
 
 1.Pizza Sales Analysis Project
@@ -35,7 +35,7 @@ Structured Query Language (SQL) is the primary tool used in this project for dat
 (b.)Database Management System
 A relational database management system (RDBMS) such as MySQL  is used to store and manage the data. The RDBMS provides a robust and scalable environment for handling the pizza sales data.
 
-'''Create Database
+```Create Database
 CREATE DATABASE pizzahut;
-USE pizzahut;'''
+USE pizzahut;```
 
