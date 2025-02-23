@@ -1,8 +1,6 @@
 # PIZZA-HUT-DATA-ANALYSIS
 ![Pizza-Hut-Logo](https://github.com/user-attachments/assets/21d97493-b874-4fef-a023-8425e5ff3544)
 
-
-
 1.Pizza Sales Analysis Project
 This project is focused on analyzing the sales data of a fictional pizza restaurant to derive meaningful business insights. The analysis aims to uncover trends in customer orders, revenue generation, and popular pizza types. By leveraging SQL queries, we can efficiently process and analyze large datasets to support data-driven decision-making.
 
@@ -36,6 +34,8 @@ Structured Query Language (SQL) is the primary tool used in this project for dat
 
 (b.)Database Management System
 A relational database management system (RDBMS) such as MySQL  is used to store and manage the data. The RDBMS provides a robust and scalable environment for handling the pizza sales data.
+create database pizzahut;
+
 create database pizzahut;
 
 -- Retrieve the total number of orders placed.
@@ -208,3 +208,5 @@ FROM (
 ) AS b
 WHERE rn <= 3
 ORDER BY category, revenue DESC;     
+
+
