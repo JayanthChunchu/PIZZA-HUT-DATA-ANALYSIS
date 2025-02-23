@@ -1,4 +1,4 @@
-## PIZZA-HUT-DATA-ANALYSIS
+# PIZZA-HUT-DATA-ANALYSIS
 ![Pizza-Hut-Logo](https://github.com/user-attachments/assets/21d97493-b874-4fef-a023-8425e5ff3544)
 
 ## 1.Pizza Sales Analysis Project
@@ -29,10 +29,10 @@ The analysis is designed to answer several key business questions, including:
 -->Top 3 most ordered pizza types based on revenue for each category.
 
 ## 4.Tools Used
-# (a.)SQL
+## (a.)SQL
 Structured Query Language (SQL) is the primary tool used in this project for data extraction, manipulation, and analysis. SQL allows us to write queries that efficiently retrieve and process data from the database, enabling us to answer complex business questions.
 
-# (b.)Database Management System
+## (b.)Database Management System
 A relational database management system (RDBMS) such as MySQL  is used to store and manage the data. The RDBMS provides a robust and scalable environment for handling the pizza sales data.
 
 ```Create Database
@@ -227,11 +227,11 @@ WHERE rn <= 3
 ORDER BY category, revenue DESC;
 ```
 ## Finding And Conclusions
--1.Total revenue and top-selling pizzas identified.
--2.Peak order hours and daily average pizza sales analyzed.
--3.Most popular pizza categories and sizes determined.
--4.Cumulative revenue trend and percentage contribution calculated.
--5.Insights for promotions, inventory, and business growth derived.
+- 1.Total revenue and top-selling pizzas identified.
+- 2.Peak order hours and daily average pizza sales analyzed.
+- 3.Most popular pizza categories and sizes determined.
+- 4.Cumulative revenue trend and percentage contribution calculated.
+- 5.Insights for promotions, inventory, and business growth derived.
 
 
 
